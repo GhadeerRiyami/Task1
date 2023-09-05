@@ -1,0 +1,22 @@
+<body>
+    <table class="table table-hover">
+<thead>
+    <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Marks / 100</th>
+    <th scope="col">Pass or Fail</th>
+</tr>
+</thead>
+
+<tbody *ngFor="let item of students">
+<tr> 
+    <td>{{item.Name}}</td>
+    <td>{{item.Email}}</td>
+    <td [ngClass]="{'red-text' : item.Marks < 50, 'green-text' : item.Marks >= 50 }">{{item.Marks}}</td>
+    <td *ngIf="item.Marks >= 50" class="pass-badge">Pass</td>
+    <td *ngIf="item.Marks < 50" class="fail-badge">Fail</td>
+</tr>
+</tbody>
+</table>
+</body>

@@ -1,0 +1,12 @@
+<div style= "text-align: center; background-color: antiquewhite;font-style: italic;" [ngStyle]="dynamicStyles"> 
+    <img src="assets/itec.png" width="100" height="100">
+    <h1> {{str}}.. Welcome </h1>
+    <h5 style="text-align: center;"> Enter your Name :</h5>
+<input type="text" [(ngModel)]="data"> <br>
+<h5 style="text-align: center;">{{data}} </h5> 
+<ul class="ul-div">
+    <button type="submit" [routerLink]="['/student']"> Go to Student Mark </button>
+</ul>
+<hr>
+</div>
+<router-outlet></router-outlet>
